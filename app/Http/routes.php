@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
-Route::get('blog/category/{category}','BlogController@category');
-Route::resource('lists','ListsController');
 Route::auth();
+Route::resource('article','DocController');
 
+Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index');

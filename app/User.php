@@ -28,4 +28,9 @@ class User extends Authenticatable
     {
 	return strtolower($this->username);
     }
+
+    public function profile()
+    {
+	return $this->hasOne('todoparrot\Profile');
+    }
 }

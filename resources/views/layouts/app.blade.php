@@ -26,10 +26,12 @@
              </div>
             @else
                 <div class="ui simple right floated dropdown item">
-            
                     {{ Auth::user()->name }}
                     <i class="dropdown icon"></i>
                     <div class="menu">
+                        <a class="item" href="#" >Your profile</a>
+                        <a class="item" href="#" >Help</a>
+                        <a class="item" href="#" >Settings</a>
                         <a class="item" href="{{ url('/logout') }}">Logout</a>
                     </div>
             @endif

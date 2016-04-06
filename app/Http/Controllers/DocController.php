@@ -8,13 +8,15 @@ use todoparrot\Http\Requests;
 
 use todoparrot\Document;
 use todoparrot\Http\Requests\DocumentFormRequest;
-
+use todoparrot\Message;
 // the controller to list document
 class DocController extends Controller
 {
     public function index(){
 	       $docs = Document::all();
-	       return view('docs.index')->with('docs',$docs);
+	      	
+	       $message = new Message;
+	       return view('docs.index')->with('docs',$docs)->with('message',$message);
 	}
 
 	public function create(){

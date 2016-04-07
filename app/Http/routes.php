@@ -13,6 +13,7 @@
 
 Route::auth();
 Route::resource('article','DocController');
+Route::resource('people', 'ProfileController');
 
 Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index');

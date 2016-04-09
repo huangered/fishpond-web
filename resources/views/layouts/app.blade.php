@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">
 
-    <title>Laravel</title>
+    <title>Clam</title>
     <link rel="stylesheet" type="text/css" href="/semantic/semantic.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="/semantic/semantic.js"></script>
@@ -29,8 +29,8 @@
                     {{ Auth::user()->name }}
                     <i class="dropdown icon"></i>
                     <div class="menu">
-                        <a class="item" href="#" >Your profile</a>
-                        <a class="item" href="#" >Help</a>
+                        <a class="item" href="/people/{{ Auth::user()->id }}" >Your profile</a>
+                        <a class="item" href="/help" >Help</a>
                         <a class="item" href="#" >Settings</a>
                         <a class="item" href="{{ url('/logout') }}">Logout</a>
                     </div>

@@ -19,6 +19,7 @@
             </a>
             <a href="{{ url('/') }}" class="item">Home</a>
             <a href="{{ url('/article') }}" class="item">Article</a>
+            <a href="{{ url('/photo') }}" class="item">Photo</a>
             @if (Auth::guest())
             <div class="right menu">
                 <a href="{{ url('/login') }} " class="item " >Login</a>

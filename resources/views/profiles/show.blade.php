@@ -31,8 +31,26 @@
 		<div class="twelve wide column">
 			
 			<a href="/people/{{ $user->id}}/edit">edit</a>
+			<div class="ui top attached tabular menu">
+				<a class="item active" data-tab="first">Article</a>
+				<a class="item" data-tab="second">Picture</a>
+				<a class="item" data-tab="third">Public Activity</a>
+			</div>
+			<div class="ui bottom attached tab segment active" data-tab="first">
+				Article
+			</div>
+			<div class="ui bottom attached tab segment" data-tab="second">
+				Picture
+			</div>
+			<div class="ui bottom attached tab segment" data-tab="third">
+				Public Activity
+			</div>
+			<script>
+				$('.menu .item')
+					.tab()
+				;
+			</script>
 		</div>
-		
 	</div>
 </div>
 @endsection

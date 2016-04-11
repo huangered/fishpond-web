@@ -37,14 +37,20 @@ class ImageController extends Controller
 		$photos = ImageList::find($id);
 		return view('photos.show')->with('photos', $photos);
 	}
-
+	
+	public function create(){
+		return view('photos.create');
+	}
+	
 	public function edit($id){
 	}
 
 	public function update() {
 	}
 
-	public function store() {
+	public function store(Request $request) {
+		$f=$request->file('photo');
+		\Image::make($f)->resize(300, 200)->save('foo.jpg');
 	}
 
 }

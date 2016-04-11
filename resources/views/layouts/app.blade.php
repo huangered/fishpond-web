@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="/semantic/semantic.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="/semantic/semantic.js"></script>
-   
+    @yield('js')
 </head>
 <body >
     <div class="ui fixed borderless menu">

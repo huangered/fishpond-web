@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="ui container" style="padding-top: 5em">
-<p>Photos</p>
+	<a class="ui primary button" href="/photo/create">Upload new picture</a>
 	<div class="ui grid">
 	@foreach ($photos as $photo)
 		<div class="two wide column">

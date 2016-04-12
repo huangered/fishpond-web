@@ -68,6 +68,7 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => todoparrot\User::class,
+            'table' => 'users',
         ],
 
         // 'users' => [

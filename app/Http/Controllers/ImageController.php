@@ -50,6 +50,7 @@ class ImageController extends Controller
 
 	public function store(Request $request) {
 		$f=$request->file('photo');
+		dd($f->getClientOriginalName());
 		\Image::make($f)->resize(300, 200)->save('foo.jpg');
 	}
 

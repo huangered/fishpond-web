@@ -1,6 +1,6 @@
 <?php
 
-namespace todoparrot\Http\Requests;
+namespace fishpond\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

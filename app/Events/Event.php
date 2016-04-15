@@ -1,6 +1,6 @@
 <?php
 
-namespace todoparrot\Events;
+namespace fishpond\Events;
 
 abstract class Event
 {

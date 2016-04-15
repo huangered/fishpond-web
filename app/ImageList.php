@@ -1,6 +1,6 @@
 <?php
 
-namespace todoparrot;
+namespace fishpond;
 
 use Illuminate\Database\Eloquent\Model;
 

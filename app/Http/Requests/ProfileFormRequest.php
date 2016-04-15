@@ -1,8 +1,8 @@
 <?php
 
-namespace todoparrot\Http\Requests;
+namespace fishpond\Http\Requests;
 
-use todoparrot\Http\Requests\Request;
+use fishpond\Http\Requests\Request;
 
 class ProfileFormRequest extends Request
 {

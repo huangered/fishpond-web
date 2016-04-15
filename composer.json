@@ -23,7 +23,7 @@
             "database"
         ],
         "psr-4": {
-            "todoparrot\\": "app/"
+            "fishpond\\": "app/"
         }
     },
     "autoload-dev": {
@@ -50,5 +50,11 @@
     "config": {
         "preferred-install": "dist",
 	"secure-http":false
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
     }
 }

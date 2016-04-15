@@ -11,7 +11,7 @@
 |
 */
 
-$factory->define(todoparrot\User::class, function (Faker\Generator $faker) {
+$factory->define(fishpond\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->safeEmail,

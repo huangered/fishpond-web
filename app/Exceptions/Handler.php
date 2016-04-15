@@ -1,6 +1,6 @@
 <?php
 
-namespace todoparrot\Exceptions;
+namespace fishpond\Exceptions;
 
 use Exception;
 use Illuminate\Validation\ValidationException;

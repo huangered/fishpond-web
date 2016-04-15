@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => todoparrot\User::class,
+        'model' => fishpond\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

@@ -1,11 +1,11 @@
 <?php
 
-namespace todoparrot\Http\Controllers;
+namespace fishpond\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use todoparrot\Http\Requests;
-use todoparrot\ImageList;
+use fishpond\Http\Requests;
+use fishpond\ImageList;
 
 class ImageController extends Controller
 {

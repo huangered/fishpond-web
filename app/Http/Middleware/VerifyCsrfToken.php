@@ -1,6 +1,6 @@
 <?php
 
-namespace todoparrot\Http\Middleware;
+namespace fishpond\Http\Middleware;
 
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as BaseVerifier;
 

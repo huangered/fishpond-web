@@ -1,6 +1,6 @@
 <?php
 
-namespace todoparrot;
+namespace fishpond;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
@@ -32,6 +32,6 @@ class User extends Authenticatable
 
     public function profile()
     {
-	return $this->hasOne('todoparrot\Profile');
+	return $this->hasOne('fishpond\Profile');
     }
 }

@@ -1,14 +1,14 @@
 <?php
 
-namespace todoparrot\Http\Controllers;
+namespace fishpond\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use todoparrot\Http\Requests;
+use fishpond\Http\Requests;
 
-use todoparrot\Document;
-use todoparrot\Http\Requests\DocumentFormRequest;
-use todoparrot\Message;
+use fishpond\Document;
+use fishpond\Http\Requests\DocumentFormRequest;
+use fishpond\Message;
 // the controller to list document
 class DocController extends Controller
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace todoparrot\Policies;
+namespace fishpond\Policies;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-use todoparrot\User;
-use todoparrot\Admin;
+use fishpond\User;
+use fishpond\Admin;
 
 class AdminPolicy
 {

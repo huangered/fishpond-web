@@ -1,6 +1,6 @@
 <?php
 
-namespace todoparrot\Providers;
+namespace fishpond\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

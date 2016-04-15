@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
 	<div class="row">
-		<h1>Create TODOParrot</h1>
+		<h1>Create fishpond</h1>
 
 	{!! Form::open(array('route'=>'article.store', 'class'=>'form'))!!}
 	{!! Form::label('Your title')!!}

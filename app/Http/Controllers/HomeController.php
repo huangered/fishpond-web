@@ -1,8 +1,8 @@
 <?php
 
-namespace todoparrot\Http\Controllers;
+namespace fishpond\Http\Controllers;
 
-use todoparrot\Http\Requests;
+use fishpond\Http\Requests;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller

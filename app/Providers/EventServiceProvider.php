@@ -1,6 +1,6 @@
 <?php
 
-namespace todoparrot\Providers;
+namespace fishpond\Providers;
 
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'todoparrot\Events\SomeEvent' => [
-            'todoparrot\Listeners\EventListener',
+        'fishpond\Events\SomeEvent' => [
+            'fishpond\Listeners\EventListener',
         ],
     ];
 

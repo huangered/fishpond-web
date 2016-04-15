@@ -1,5 +1,5 @@
 <?php 
-namespace todoparrot;
+namespace fishpond;
 
 use Zizaco\Entrust\EntrustRole;
 

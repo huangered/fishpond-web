@@ -19,7 +19,7 @@ return [
     | the role if it is in a different namespace.
     |
     */
-    'role' => 'todoparrot\Role',
+    'role' => 'fishpond\Role',
 
     /*
     |--------------------------------------------------------------------------
@@ -40,7 +40,7 @@ return [
     | Update the permission if it is in a different namespace.
     |
     */
-    'permission' => 'todoparrot\Permission',
+    'permission' => 'fishpond\Permission',
 
     /*
     |--------------------------------------------------------------------------

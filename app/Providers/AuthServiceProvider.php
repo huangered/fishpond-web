@@ -1,12 +1,12 @@
 <?php
 
-namespace todoparrot\Providers;
+namespace fishpond\Providers;
 
 use Illuminate\Contracts\Auth\Access\Gate as GateContract;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
-use todoparrot\Admin;
-use todoparrot\Policies\AdminPolicy;
+use fishpond\Admin;
+use fishpond\Policies\AdminPolicy;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -16,7 +16,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'todoparrot\Model' => 'todoparrot\Policies\ModelPolicy',
+        'fishpond\Model' => 'fishpond\Policies\ModelPolicy',
         Admin::class => AdminPolicy::class,
     ];
 

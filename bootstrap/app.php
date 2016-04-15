@@ -28,17 +28,17 @@ $app = new Illuminate\Foundation\Application(
 
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
-    todoparrot\Http\Kernel::class
+    fishpond\Http\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
-    todoparrot\Console\Kernel::class
+    fishpond\Console\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    todoparrot\Exceptions\Handler::class
+    fishpond\Exceptions\Handler::class
 );
 
 /*

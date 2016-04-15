@@ -151,10 +151,10 @@ return [
         /*
          * Application Service Providers...
          */
-        todoparrot\Providers\AppServiceProvider::class,
-        todoparrot\Providers\AuthServiceProvider::class,
-        todoparrot\Providers\EventServiceProvider::class,
-        todoparrot\Providers\RouteServiceProvider::class,
+        fishpond\Providers\AppServiceProvider::class,
+        fishpond\Providers\AuthServiceProvider::class,
+        fishpond\Providers\EventServiceProvider::class,
+        fishpond\Providers\RouteServiceProvider::class,
 
 	/*
 	 * 3rd

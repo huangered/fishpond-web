@@ -1,6 +1,6 @@
 <?php
 
-namespace todoparrot\Console\Commands;
+namespace fishpond\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Inspiring;

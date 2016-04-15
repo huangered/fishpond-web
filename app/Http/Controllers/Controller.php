@@ -1,6 +1,6 @@
 <?php
 
-namespace todoparrot\Http\Controllers;
+namespace fishpond\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

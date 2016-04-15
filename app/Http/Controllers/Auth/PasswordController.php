@@ -1,8 +1,8 @@
 <?php
 
-namespace todoparrot\Http\Controllers\Auth;
+namespace fishpond\Http\Controllers\Auth;
 
-use todoparrot\Http\Controllers\Controller;
+use fishpond\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class PasswordController extends Controller

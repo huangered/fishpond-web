@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => todoparrot\User::class,
+            'model' => fishpond\User::class,
             'table' => 'users',
         ],
 

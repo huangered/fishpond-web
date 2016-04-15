@@ -1,6 +1,6 @@
 <?php
 
-namespace todoparrot;
+namespace fishpond;
 
 class Message
 {

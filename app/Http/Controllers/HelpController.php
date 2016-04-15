@@ -1,13 +1,13 @@
 <?php
 
-namespace todoparrot\Http\Controllers;
+namespace fishpond\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use todoparrot\Http\Requests;
-use todoparrot\Http\Requests\ProfileFormRequest;
+use fishpond\Http\Requests;
+use fishpond\Http\Requests\ProfileFormRequest;
 
-use todoparrot\User;
+use fishpond\User;
 
 class HelpController extends Controller
 {

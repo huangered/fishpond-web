@@ -6,7 +6,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
 class User extends Authenticatable
 {
-     use EntrustUserTrait;
+     use EntrustUserTrait {
+     	EntrustUserTrait::can as may;
+     }
     /**
      * The attributes that are mass assignable.
      *

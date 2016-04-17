@@ -31,7 +31,10 @@
                     <i class="dropdown icon"></i>
                     <div class="menu">
                         <a class="item" href="/people/{{ Auth::user()->id }}" >Your profile</a>
-                        <a class="item" href="/help" >Help</a>
+                        @if (Auth::user()->hasRole('admin')) 
+                            <a class="item" href="{{ url('/admin') }}">Admin</a>
+                        @endif
+                        <a class="item" href="{{ url('/help') }}" >Help</a>
                         <a class="item" href="#" >Settings</a>
                         <a class="item" href="{{ url('/logout') }}">Logout</a>
                     </div>

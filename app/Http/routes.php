@@ -12,10 +12,14 @@
 */
 
 Route::auth();
-Route::resource('article','DocController');
-Route::resource('people', 'ProfileController');
-Route::resource('photo','ImageController');
+Route::resource('article', 'DocController');
+Route::resource('people',  'ProfileController');
+Route::resource('photo', 'ImageController');
 
 Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index');
 Route::get('/help', 'HelpController@index');
+Route::get('admin', 'AdminController@index');
+Route::post('admin', 'AdminController@update');
+Route::post('admin/permission', 'AdminController@storePermission');
+Route::post('admin/role', 'AdminController@storeRole');

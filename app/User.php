@@ -29,11 +29,19 @@ class User extends Authenticatable
 
     public function getUsername()
     {
-	return strtolower($this->username);
+	    return strtolower($this->username);
     }
 
     public function profile()
     {
-	return $this->hasOne('fishpond\Profile');
+	    return $this->hasOne('fishpond\Profile');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function activities()
+    {
+        return $this->hasMany('fishpond\Activity');
     }
 }

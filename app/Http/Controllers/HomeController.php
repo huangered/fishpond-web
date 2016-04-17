@@ -5,6 +5,8 @@ namespace fishpond\Http\Controllers;
 use fishpond\Http\Requests;
 use Illuminate\Http\Request;
 
+use fishpond\Activity;
+
 class HomeController extends Controller
 {
     /**
@@ -24,6 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $activities = Activity::all();
+        return view('home')->with('acts', $activities);
     }
 }

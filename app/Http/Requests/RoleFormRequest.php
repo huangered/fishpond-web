@@ -24,8 +24,9 @@ class RoleRequest extends Request
     public function rules()
     {
         return [
-            'userId' => 'required',
-            'roleId' => 'required'
+            'name' => 'required',
+            'display_name' => 'required',
+            'description' => 'required'
         ];
     }
 }

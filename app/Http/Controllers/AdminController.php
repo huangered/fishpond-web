@@ -22,25 +22,25 @@ class AdminController extends Controller
 
 	public function storeRole(RoleFormRequest $req) {
 		if (Auth::user()->hasRole('admin')) {
-			$userId = $req->get('userId');
-	       	$roleId = $req->get('roleId');
+			$role = new Role(array(
+				'name' => $req->get('name'),
+				'display' => $req->get('display_name'),
+				'description' => $req->get('description')));
 
-	       	$user = User::find($userId);
-	       	$user->roles()->attach($roleId);
-		
-			return "success";
-		}else {
-			return "fail";
+			$role->save();
+			return \Redirct::route('admin.index');
 		}
 	}
 
 	public function storePermission(PermissionFormRequest $req) {
-		$permission = new Permission(array(
-			'name' => $req->get('name'),
-			'display_name' => $req->get('display_name'),
-			'description' => $req->get('description')
+		if (Auth::user()->hasRole('admin')) {
+			$permission = new Permission(array(
+				'name' => $req->get('name'),
+				'display_name' => $req->get('display_name'),
+				'description' => $req->get('description')
 			));
-		$permission->save();
-		return \Redirect::route('admin.index');
+			$permission->save();
+			return \Redirect::route('admin.index');
+		}
 	}
 }

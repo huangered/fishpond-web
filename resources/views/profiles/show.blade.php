@@ -34,7 +34,8 @@
 			<div class="ui top attached tabular menu">
 				<a class="item active" data-tab="first">Article</a>
 				<a class="item" data-tab="second">Picture</a>
-				<a class="item" data-tab="third">Public Activity</a>
+				<a class="item" data-tab="third">
+					<i class="rss icon"></i>Public Activity</a>
 			</div>
 			<div class="ui bottom attached tab segment active" data-tab="first">
 				Article
@@ -43,7 +44,15 @@
 				Picture
 			</div>
 			<div class="ui bottom attached tab segment" data-tab="third">
-				Public Activity
+				@foreach($acts as $act)
+					<div>
+						<div>{{ $act->created_at }} ago</div>
+						<div>{{ $act->action }}</div>
+						<div>{{ $act->good }}</div>
+						<div>{{ $act->bad }}</div>
+					</div>
+					<hr/>
+				@endforeach
 			</div>
 			<script>
 				$('.menu .item')

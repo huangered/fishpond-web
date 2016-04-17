@@ -2,6 +2,7 @@
 
 namespace fishpond\Http\Controllers;
 
+use fishpond\Activity;
 use Illuminate\Http\Request;
 
 use fishpond\Http\Requests;
@@ -18,7 +19,8 @@ class ProfileController extends Controller
     public function show($id){
 		\Log::info($id);
 		$user = User::find($id);
-		return view('profiles.show')->with('user', $user);
+		$acts = Activity::where('user_id', '=', $id)->get();
+		return view('profiles.show')->with('user', $user)->with('acts', $acts);
 	}
 
 	public function edit($id){

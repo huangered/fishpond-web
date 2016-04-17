@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Document extends Model
 {
-    private $rules=[
+	private $rules=[
 		'title' => 'required',
 		'author' => 'required',
 		'content' => 'required'

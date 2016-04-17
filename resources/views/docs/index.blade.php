@@ -13,21 +13,35 @@
       @endif
       @if($docs->count() > 0)
         <h1>we have {{$docs->count()}} articles</h1>
-        <div>
-          @foreach ($docs as $doc)
-          <p>{{$doc->id}}</p>
-          <p>{{$doc->title}}</p>
-          <p>{{$doc->author}}</p>
-          <p>{{$doc->content}}</p>
-          <a href="/article/{{$doc->id}}" >edit</a>
-          <hr/>
-          @endforeach
-        </div>
       @else
-        <p>
+        <h1>
           No lists found!
-        <p>
+        </h1>
       @endif
+      @foreach ($docs as $doc)
+      <div class="doc">
+        <div class="body">
+          <div class="label">
+            <div class="user">{{ $doc->author }}</div>
+            <div class="time" >created at {{ $doc->created_at }}</div>
+            <div class="title" >
+                <a href="/article/{{$doc->id}}">{{$doc->title}}</a>
+            </div>
+          </div>
+          <div class="content">
+            <p>{{$doc->content}}</p>
+          </div>
+            <div class="readmore">
+                <a href="/article/{{$doc->id}}">Read more</a>
+            </div>
+            <div class="favour">
+                <p>like 100</p>
+            </div>
+        </div>
+
+        <a href="/article/{{$doc->id}}" >edit</a>
+      </div>
+      @endforeach
     </div>
     <div class="four wide column">
       <a href="/article/create" >New</a>

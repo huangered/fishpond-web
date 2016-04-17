@@ -14,6 +14,8 @@
 Route::auth();
 Route::resource('article', 'DocController');
 Route::resource('people',  'ProfileController');
+Route::resource('people.roles', 'RoleController');
+Route::resource('people.roles.perms', 'PermController');
 Route::resource('photo', 'ImageController');
 Route::resource('label', 'LabelController');
 
@@ -22,5 +24,3 @@ Route::get('/home', 'HomeController@index');
 Route::get('/help', 'HelpController@index');
 Route::get('admin', 'AdminController@index');
 Route::post('admin', 'AdminController@update');
-Route::post('admin/permission', 'AdminController@storePermission');
-Route::post('admin/role', 'AdminController@storeRole');

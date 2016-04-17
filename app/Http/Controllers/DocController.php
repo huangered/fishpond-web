@@ -23,13 +23,14 @@ class DocController extends Controller
 	       return view('docs.create');
 	}
 	public function store(DocumentFormRequest $request){
-	       $docs = new Document(array(
+		$user = \Auth::user();
+		$docs = new Document(array(
 	       	     'title' => $request->get('title'),
-	       	     'author' => $request->get('author'),
+	       	     'author' => $user->id,
 		         'content' => $request->get('content')
 		     ));
-	       $docs->save();
-	       return \Redirect::route('article.index');
+        $docs->save();
+        return \Redirect::route('article.index');
 	}
 	public function show($id){
 		\Log::info($id);

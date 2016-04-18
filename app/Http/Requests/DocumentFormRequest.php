@@ -24,11 +24,8 @@ class DocumentFormRequest extends Request
     public function rules()
     {
         return [
-           
         'title' => 'required',
-        'author' => 'required',
         'content' => 'required'
-        
         ];
     }
 }

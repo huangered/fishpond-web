@@ -10,25 +10,7 @@ use fishpond\ImageList;
 class ImageController extends Controller
 {
 	public function index() {
-		$img1 = new ImageList(array(
-			'user_id' => 1,
-			'name' => 'name1',
-	       	'description' => 'dddd',
-		    'path' => 'rrr',
-		    'good' => 10,
-		    'bad' => 20
-		     ));
-
-		$img2 = new ImageList(array(
-			'user_id' => 1,
-			'name' => 'name2',
-	       	'description' => 'ggg',
-		    'path' => 'eeeee',
-		    'good' => 10,
-		    'bad' => 20
-		     ));
-		$imgs=array($img1, $img2, $img1, $img1, $img1);
-
+		$imgs=ImageList::all();
 		return view('photos.index')->with('photos', $imgs);
 	}
 
@@ -50,8 +32,22 @@ class ImageController extends Controller
 
 	public function store(Request $request) {
 		$f=$request->file('photo');
-		dd($f->getClientOriginalName());
-		\Image::make($f)->resize(300, 200)->save('foo.jpg');
+		$name=$f->getClientOriginalName();
+		\Log::info($name);
+		$path="./".\Auth::user()->id."/".$name;
+		\Log::info($path);
+		$photo=new ImageList(array(
+			'user_id' => \Auth::user()->id,
+			'name' => $name,
+			'description'=> '',
+			'path'=>$path,
+			'good' => 0,
+			'bad' =>0
+		));
+		$photo->save();
+		\Image::make($f)->save($photo->path);
+		\Log::info($photo);
+		return \Redirect::route('photo.index');
 	}
 
 }

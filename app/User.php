@@ -44,4 +44,8 @@ class User extends Authenticatable
     {
         return $this->hasMany('fishpond\Activity');
     }
+
+    public function documents() {
+        return $this->hasMany('fishpond\Document');
+    }
 }

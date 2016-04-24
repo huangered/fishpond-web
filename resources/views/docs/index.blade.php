@@ -57,7 +57,18 @@
                 <a class="item" href="{{ url("article/?label=".$label->id) }}">{{ $label->name }}</a>
                 @endforeach
             </div>
+            <a href="/label" >See all...</a>
         </div>
+        <div class="ui divider"></div>
+        <div>
+            <h1>Best article in this week</h1>
+            <div class="ui list">
+                <a class="item">article 1</a>
+                <a class="item">article 2</a>
+                <a class="item">article 3</a>
+            </div>
+        </div>
+        <div class="ui divider"></div>
     </div>
   </div>
 </div>

@@ -38,7 +38,11 @@
 					<i class="rss icon"></i>Public Activity</a>
 			</div>
 			<div class="ui bottom attached tab segment active" data-tab="first">
-				Article
+				@foreach($user->documents()->get() as $doc)
+				<div>
+					<p>{{$doc->id}}  {{$doc->title}}</p>
+				</div>
+				@endforeach
 			</div>
 			<div class="ui bottom attached tab segment" data-tab="second">
 				Picture

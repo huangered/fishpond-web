@@ -57,6 +57,7 @@
                 <a class="item" href="{{ url("article/?label=".$label->id) }}">{{ $label->name }}</a>
                 @endforeach
             </div>
+            <a href="/label" >See all...</a>
         </div>
     </div>
   </div>

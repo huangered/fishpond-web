@@ -17,4 +17,9 @@ class Document extends Model
 	{
 		return $this->belongsToMany('fishpond\Label')->withTimestamps();
 	}
+
+	public function user()
+	{
+		return $this->belongsTo('fishpond\User');
+	}
 }

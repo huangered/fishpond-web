@@ -11,9 +11,9 @@ class LabelController extends Controller
 {
     //
     public function index(){
-        $ls = Label::all();
+        $labels = Label::all();
 
-        return $ls;
+        return view("labels.index")->with("labels", $labels);
     }
 
     public function store() {

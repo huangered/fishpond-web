@@ -12,4 +12,9 @@ class Document extends Model
 		'content' => 'required'
 		];
 	protected $fillable=['title', 'author', 'content'];
+
+	public function labels()
+	{
+		return $this->belongsToMany('fishpond\Label')->withTimestamps();
+	}
 }

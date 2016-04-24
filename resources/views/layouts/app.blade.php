@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">
 
-    <title>Clam</title>
+    <title>Fishpond</title>
     <link rel="stylesheet" type="text/css" href="/semantic/semantic.css">
     <link rel="stylesheet" type="text/css" href="/css/fishpond.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -17,7 +17,7 @@
     <div class="ui fixed borderless menu">
         <div class="ui container">
             <a href="#" class="header item">
-                Clam
+                Fishpond
             </a>
             <a href="{{ url('/') }}" class="item">Home</a>
             <a href="{{ url('/article') }}" class="item">Article</a>

@@ -9,14 +9,22 @@ use fishpond\Http\Requests;
 use fishpond\Document;
 use fishpond\Http\Requests\DocumentFormRequest;
 use fishpond\Message;
+use fishpond\Label;
+
 // the controller to list document
 class DocController extends Controller
 {
-    public function index(){
-	       $docs = Document::all();
-	      	
-	       $message = new Message;
-	       return view('docs.index')->with('docs',$docs)->with('message',$message);
+    public function index(Request $request)
+	{
+		if ($request->label!=null) {
+			$docs = Label::find($request->label)->documents()->get();
+		}else {
+			$docs = Document::all();
+		}
+		$message = new Message;
+
+		$labels = Label::all();
+		return view('docs.index')->with('docs',$docs)->with('message',$message)->with('labels', $labels);
 	}
 
 	public function create(){

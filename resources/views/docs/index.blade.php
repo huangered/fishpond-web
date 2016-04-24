@@ -22,6 +22,11 @@
       <div class="doc">
         <div class="body">
           <div class="label">
+              <div class="tag">
+                  @foreach($doc->labels()->get() as $label)
+                     <a href="{{ url("/article/?label=".$label->id) }}">{{ $label->name }}</a>
+                  @endforeach
+              </div>
             <div class="user">{{ $doc->author }}</div>
             <div class="time" >created at {{ $doc->created_at }}</div>
             <div class="title" >
@@ -45,6 +50,14 @@
     </div>
     <div class="four wide column">
       <a href="/article/create" >New</a>
+        <div>
+            <h1>Labels</h1>
+            <div class="ui link list">
+                @foreach($labels as $label)
+                <a class="item" href="{{ url("article/?label=".$label->id) }}">{{ $label->name }}</a>
+                @endforeach
+            </div>
+        </div>
     </div>
   </div>
 </div>

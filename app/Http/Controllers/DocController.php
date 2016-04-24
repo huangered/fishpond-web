@@ -28,16 +28,33 @@ class DocController extends Controller
 	}
 
 	public function create(){
-	       return view('docs.create');
+		$labels = Label::all();
+		return view('docs.create')->with('labels', $labels);
 	}
 	public function store(DocumentFormRequest $request){
+		$labelArr =  explode(",", $request->tags);
+
 		$user = \Auth::user();
 		$docs = new Document(array(
-	       	     'title' => $request->get('title'),
-	       	     'author' => $user->id,
-		         'content' => $request->get('content')
-		     ));
+			'title' => $request->get('title'),
+			'author' => $user->name,
+			'content' => $request->get('content'),
+			'user_id' => $user->id));
         $docs->save();
+		// add & to change arr value
+		foreach ($labelArr as &$value) {
+			if (!is_numeric($value)) {
+				$l = new Label();
+				$l->name=$value;
+				$l->save();
+				$value=$l->id;
+			} else{
+				$value=intval($value);
+			}
+
+		}
+		unset($value); // remove the $ reference
+		$docs->labels()->attach($labelArr);
         return \Redirect::route('article.index');
 	}
 	public function show($id){

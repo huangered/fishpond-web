@@ -11,6 +11,7 @@
 |
 */
 
+// view route
 Route::auth();
 Route::resource('article', 'DocController');
 Route::resource('people',  'ProfileController');
@@ -25,7 +26,7 @@ Route::get('/help', 'HelpController@index');
 Route::get('admin', 'AdminController@index');
 Route::post('admin', 'AdminController@update');
 
-// rest api
+// rest api route
 Route::group(['prefix' => 'api/v1'], function () {
     Route::get('photo', function ()    {
         // Matches The "/admin/users" URL

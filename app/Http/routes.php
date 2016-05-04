@@ -24,3 +24,10 @@ Route::get('/home', 'HomeController@index');
 Route::get('/help', 'HelpController@index');
 Route::get('admin', 'AdminController@index');
 Route::post('admin', 'AdminController@update');
+
+// rest api
+Route::group(['prefix' => 'api/v1'], function () {
+    Route::get('photo', function ()    {
+        // Matches The "/admin/users" URL
+    });
+});

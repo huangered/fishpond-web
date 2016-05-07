@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Document extends Migration
+class CreateDocumentLabel extends Migration
 {
     /**
      * Run the migrations.

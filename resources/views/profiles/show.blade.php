@@ -45,7 +45,11 @@
 				@endforeach
 			</div>
 			<div class="ui bottom attached tab segment" data-tab="second">
-				Picture
+				@foreach($user->images()->get() as $image)
+					<div>
+						<p>{{$image->id}}</p>
+					</div>
+				@endforeach
 			</div>
 			<div class="ui bottom attached tab segment" data-tab="third">
 				@foreach($acts as $act)

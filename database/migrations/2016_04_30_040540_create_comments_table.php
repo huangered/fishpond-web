@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateImageListsTable extends Migration
+class CreateCommentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,15 +12,16 @@ class CreateImageListsTable extends Migration
      */
     public function up()
     {
-        Schema::create('images', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
-            $table->string('name');
-            $table->string('description');
-            $table->string('path');
-            $table->integer('good')->unsigned();
-            $table->integer('bad')->unsigned();
+            $table->integer('image_id')->unsigned();
+            $table->string('message')->nullable();
             $table->timestamps();
+
+
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('image_id')->references('id')->on('images');
         });
     }
 
@@ -31,6 +32,6 @@ class CreateImageListsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('image_lists');
+        Schema::drop('comments');
     }
 }

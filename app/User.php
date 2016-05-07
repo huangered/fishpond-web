@@ -48,4 +48,8 @@ class User extends Authenticatable
     public function documents() {
         return $this->hasMany('fishpond\Document');
     }
+
+    public function images() {
+        return $this->hasMany('fishpond\Image');
+    }
 }

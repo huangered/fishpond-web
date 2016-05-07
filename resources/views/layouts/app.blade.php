@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="text/css" href="/semantic/semantic.css">
     <link rel="stylesheet" type="text/css" href="/css/fishpond.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="/semantic/semantic.js"></script>
-    <script src="/js/vue.min.js"></script>
+    <script src="{{ url('/semantic/semantic.js') }}"></script>
+    <script src="{{ url('/js/vue.min.js') }}"></script>
     @yield('js')
 </head>
 <body >

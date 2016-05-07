@@ -4,7 +4,7 @@
 	<a class="ui primary button" href="/photo/create">Upload new picture</a>
 	<div class="ui small images">
 	@foreach ($photos as $photo)
-		<a href="{{$photo->path}}" class="ui small image">
+		<a href="{{ url("/photo/".$photo->id) }}" class="ui small image">
 			<img src="{{$photo->path}}">
 		</a>
 	@endforeach

@@ -28,7 +28,6 @@ Route::post('admin', 'AdminController@update');
 
 // rest api route
 Route::group(['prefix' => 'api/v1'], function () {
-    Route::get('photo', function ()    {
-        // Matches The "/admin/users" URL
-    });
+    Route::get('photo/{photo}/comment', 'ImageController@comments');
+    Route::post('photo/{photo}/comment', 'ImageController@addComment');
 });

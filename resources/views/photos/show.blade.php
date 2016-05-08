@@ -16,7 +16,7 @@
 			<h3>comment</h3>
 			<div id="comment">
 				<div v-for="comment in comments">
-					<p>@{{ comment.id }}  @{{ comment.message }}</p>
+					<p>@{{ comment.user_id }}  @{{ comment.message }}</p>
 				</div>
 				<div id="newComment">
 					<input type="text" v-model="newComment"/>

@@ -7,12 +7,14 @@ use Illuminate\Http\Request;
 use fishpond\Http\Requests;
 use fishpond\Image;
 use fishpond\Comment;
+use fishpond\Label;
 
 class ImageController extends Controller
 {
 	public function index() {
-		$imgs=Image::all();
-		return view('photos.index')->with('photos', $imgs);
+		$imgs = Image::all();
+		$labels = Label::all();
+		return view('photos.index')->with('photos', $imgs)->with('labels', $labels);
 	}
 
 	public function show($id){

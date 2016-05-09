@@ -12,19 +12,16 @@
 			</div>
 		</div>
 		<div class="four wide column">
+			<style>
+
+			</style>
 			<a class="ui primary button" href="/photo/create">Upload new picture</a>
-			<div>
-				<h1>Labels</h1>
-				<div class="ui link list">
-					@foreach($labels as $label)
-						<a class="item" href="{{ url("article/?label=".$label->id) }}">{{ $label->name }}</a>
-					@endforeach
-				</div>
-				<a href="/label" >See all...</a>
-			</div>
+
 			<div class="ui divider"></div>
 			<div>
-				<h1>Best photo in this week</h1>
+				<div class="fp-heading-content">
+					<span class="fp-heading-title">Best photos in this week</span>
+				</div>
 				<div class="ui list">
 					<a class="item">photo 1</a>
 					<a class="item">photo 2</a>
@@ -32,12 +29,26 @@
 				</div>
 			</div>
 			<div class="ui divider"></div>
+
 			<div>
-				<h1>Best photoers in this week</h1>
+				<div class="fp-heading-content">
+					<span class="fp-heading-title">Best photoers in this week</span>
+				</div>
 				<div class="ui list">
 					<a class="item">photoer 1</a>
 					<a class="item">photoer 2</a>
 					<a class="item">photoer 3</a>
+				</div>
+			</div>
+			<div class="ui divider"></div>
+			<div>
+				<div class="fp-heading-content">
+					<span class="fp-heading-title">Tags you follow</span>
+				</div>
+				<div class="ui link list">
+					@foreach($labels as $label)
+						<a class="item" href="{{ url("article/?label=".$label->id) }}">{{ $label->name }}</a>
+					@endforeach
 				</div>
 			</div>
 		</div>

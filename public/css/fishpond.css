@@ -31,3 +31,16 @@
     font-size: 12px;
     color: #bbb
 }
+
+.fp-heading-content {
+    margin-bottom: 8px;
+}
+.fp-heading-title {
+    color: rgba(0, 0, 0, .44);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    text-transform: none
+}

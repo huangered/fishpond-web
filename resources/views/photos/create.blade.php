@@ -7,6 +7,8 @@
 	{!! Form::open(array('route'=>'photo.store', 'class'=>'form', 'files'=>true))!!}
 	{!! Form::label('picture')!!}
 	{!! Form::file('photo') !!}
+	{!! Form::label('description') !!}
+	<input name="description">
 	{!! Form::submit('ok') !!}
 	{!! Form::close() !!}
 	</div>

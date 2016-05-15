@@ -29,8 +29,14 @@
 			<p>{{ $photo->good }}</p>
 		</div>
 	</div>
-	<a class="ui primary button" href="/photo/create">Delete</a>
-
+	<div>
+	{!! Form::open(array(
+      'method' => 'DELETE',
+      'route' => ['photo.destroy', $photo->id]
+    )) !!}
+	{!! Form::submit('Delete this photo?', ['class' => 'ui primary button']) !!}
+	{!! Form::close() !!}
+	</div>
 	<script>
 		$.ajaxSetup({
 			headers: { 'X-CSRF-TOKEN' : '{{ csrf_token() }}' }

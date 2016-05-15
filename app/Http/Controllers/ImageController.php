@@ -32,11 +32,17 @@ class ImageController extends Controller
 	public function update() {
 	}
 
+	public function destroy($id) {
+		Image::destroy($id);
+		return \Redirect::route('photo.index');
+	}
+
 	public function store(Request $request) {
 		$f=$request->file('photo');
 		$name=$f->getClientOriginalName();
 		\Log::info($name);
 		$path=\Auth::user()->id."/".$name;
+		\File::makeDirectory('./'.\Auth::user()->id, 0775, true, true);
 		\Log::info($path);
 		$photo=new Image(array(
 			'user_id' => \Auth::user()->id,

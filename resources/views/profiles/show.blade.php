@@ -40,14 +40,16 @@
 			<div class="ui bottom attached tab segment active" data-tab="first">
 				@foreach($user->documents()->get() as $doc)
 				<div>
-					<p>{{$doc->id}}  {{$doc->title}}</p>
+					<a href="{{ url("/article/".$doc->id) }}">{{$doc->title}}</a>
+					<span> {{ $doc->updated_at }}</span>
 				</div>
 				@endforeach
 			</div>
 			<div class="ui bottom attached tab segment" data-tab="second">
 				@foreach($user->images()->get() as $image)
 					<div>
-						<p>{{$image->id}}</p>
+						<a href="{{ url("/photo/".$image->id) }}">{{ $image->id }}</a>
+						<span> {{ $image->updated_at }}</span>
 					</div>
 				@endforeach
 			</div>

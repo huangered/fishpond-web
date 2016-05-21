@@ -8,6 +8,7 @@
     <title>Fishpond</title>
     <link rel="stylesheet" type="text/css" href="/semantic/semantic.css">
     <link rel="stylesheet" type="text/css" href="/css/fishpond.css">
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="{{ url('/semantic/semantic.js') }}"></script>
     <script src="{{ url('/js/vue.min.js') }}"></script>
@@ -46,6 +47,17 @@
     </div>
     
     @yield('content')
-   
+   <footer class="fp-footer">
+       <div>
+           <span><a href="#">Mobile app</a></span>
+           <span><a href="#">Owner</a></span>
+           <span><a href="#">Suggestion</a></span>
+       </div>
+       <div>
+           <span><a href="#">Join us</a></span>
+           <span><a href="#">Protocol</a></span>
+           <span><a href="#">Contact us</a></span>
+       </div>
+   </footer>
 </body>
 </html>

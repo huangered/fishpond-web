@@ -1,21 +1,16 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 @section('content')
-<div class="ui container" style="padding-top: 5em">
-	<div class="ui grid">
-		<div class="twelve wide column">
-			<div class="ui top attached tabular menu">
-  				<a class="item active" data-tab="first">User</a>
-  				<a class="item" data-tab="second">Role</a>
-  				<a class="item" data-tab="third">Permission</a>
-			</div>
-			<div class="ui bottom attached tab segment active" data-tab="first">
-  				<table class="ui celled table">
+<div style="padding-top: 5em">
+	<div class="fp-grid" style="width: 900px; margin: 0 auto;">
+		<div class="fp-width-1-1">
+				<table class="fp-table">
+					<caption>User</caption>
 					<thead>
 						<tr>
-							<th>id</th>
-							<th>name</th>
-							<th>email</th>
-    						<th>role</th>
+							<th>Id</th>
+							<th>Name</th>
+							<th>Email</th>
+    						<th>Role</th>
   						</tr>
   					</thead>
   					<tbody>
@@ -34,16 +29,16 @@
 					@endforeach
   					</tbody>
 				</table>
-			</div>
-			<div class="ui bottom attached tab segment" data-tab="second">
-  				<table class="ui celled table">
+
+				<table class="fp-table">
+					<caption>Role</caption>
 					<thead>
 						<tr>
-							<th>id</th>
-							<th>name</th>
-							<th>display_name</th>
-    						<th>description</th>
-    						<th>permission</th>
+							<th>Id</th>
+							<th>Name</th>
+							<th>Display Name</th>
+    						<th>Description</th>
+    						<th>Permission</th>
   						</tr>
   					</thead>
   					<tbody>
@@ -62,14 +57,13 @@
 					@endforeach
   					</tbody>
 				</table>
-			</div>
-			<div class="ui bottom attached tab segment" data-tab="third">
-  				<table class="ui celled table">
+				<table class="fp-table">
+					<caption>Permission</caption>
 					<thead>
 						<tr>
-							<th>name</th>
-							<th>display name</th>
-							<th>description</th>
+							<th>Name</th>
+							<th>Display Name</th>
+							<th>Description</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -82,13 +76,7 @@
 					@endforeach
 					</tbody>
 				</table>
-			</div>
-
-			
 		</div>
 	</div>
-	<script>
-	$('.menu .item').tab();
-	</script>
 </div>
 @endsection

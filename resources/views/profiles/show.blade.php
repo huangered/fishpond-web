@@ -64,6 +64,13 @@
 					<hr/>
 				@endforeach
 			</div>
+			<div>
+				<h4>viewed pages</h4>
+				<p>......</p>
+				<p>......</p>
+				<p>......</p>
+			</div>
+
 			<script>
 				$('.menu .item')
 					.tab()

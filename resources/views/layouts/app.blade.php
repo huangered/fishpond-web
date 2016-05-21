@@ -17,7 +17,7 @@
 <body >
     <div class="ui fixed borderless menu">
         <div class="ui container">
-            <a href="#" class="header item">
+            <a href="{{ url('/intro') }}" class="header item">
                 Fishpond
             </a>
             <a href="{{ url('/') }}" class="item">Home</a>

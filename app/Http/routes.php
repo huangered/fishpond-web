@@ -22,6 +22,7 @@ Route::resource('label', 'LabelController');
 
 Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index');
+Route::get('/intro', 'HomeController@intro');
 Route::get('/help', 'HelpController@index');
 Route::get('admin', 'AdminController@index');
 Route::post('admin', 'AdminController@update');

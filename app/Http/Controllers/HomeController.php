@@ -29,4 +29,9 @@ class HomeController extends Controller
         $activities = Activity::all();
         return view('home')->with('acts', $activities);
     }
+
+    public function intro()
+    {
+        return view('intro/index');
+    }
 }

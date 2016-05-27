@@ -1,145 +1,15 @@
-@site-width: 900px;
-@navbar-color: #e4e7ef;
-@navbar-font-color: #716164;
-@navbar-font: georgia;
+//layout
+@import "core/grid.less";
 
-@footer-color: #e4e7ef;
 
-// component: clearfix
-.fp-clearfix:before,
-.fp-clearfix:after {
-    content: "";
-    display: table;
-}
-.fp-clearfix:after {
-    clear: both;
-}
+// Navs
+@import "core/navbar.less";
 
-// component: navbar
-.fp-navbar {
-    margin: 0;
-    padding: 0;
-    border-bottom: 1px solid @navbar-color;
-    text-align: center;
-    font: 400 1.2rem @navbar-font;
-    color: @navbar-font-color;
-}
 
-.fp-navbar-nav {
-    width: @site-width;
-    margin: 0 auto;
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    //justify-content: space-around;
-}
 
-.fp-navbar-nav fp-li {
-    text-align: center;
-    display: inline;
-}
+// element
+@import "core/table.less";
 
-.fp-navbar-nav > li > a {
-    width: 100%;
-    color: #040211;
-    line-height: 40px;
-    top: 1px;
-	vertical-align: middle;
-	text-decoration: none;
-}
-
-.fp-navbar-nav > li > a:link {
-    color: red;
-    padding: 5px;
-}
-
-// component footer
-.fp-footer {
-    margin: 0 auto;
-    text-align: center;
-    border-top: 1px solid @footer-color;
-}
-
-// component: grid
-.fp-grid {
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    /* 1 */
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-/*
- * widths
- */
-/* whole */
-.fp-width-1-1 {
-    width: 100%;
-}
-/* 50% */
-.fp-width-1-2 {
-    width: 50%;
-}
-/* 25% */
-.fp-width-1-4 {
-    width: 25%;
-}
-
-// component table
-/*
- * 1. Remove most spacing between table cells.
- * 2. Block element behavior
- * 3. Style
- */
-.fp-table {
-    /* 1 */
-    border-collapse: collapse;
-    border-spacing: 0;
-    /* 2 */
-    width: 100%;
-    /* 3 */
-    margin-bottom: 15px;
-}
-
-/*
- * Add margin if adjacent element
- */
-* + .fp-table {
-    margin-top: 15px;
-}
-.fp-table th,
-.fp-table td {
-    padding: 8px 8px;
-}
-/*
- * Set alignment
- */
-.fp-table th {
-    text-align: left;
-}
-.fp-table td {
-    vertical-align: top;
-}
-.fp-table thead th {
-    vertical-align: bottom;
-}
-.fp-table td {
-    border-bottom: 1px solid #e5e5e5;
-}
-/*
- * Caption and footer
- */
-.fp-table caption,
-.fp-table tfoot {
-    font-size: 12px;
-    font-style: italic;
-}
-.fp-table caption {
-    text-align: left;
-    color: #999999;
-}
+// common
+@import "core/button.less";
+@import "core/footer.less";

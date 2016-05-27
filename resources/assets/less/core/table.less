@@ -1,0 +1,52 @@
+// component table
+/*
+ * 1. Remove most spacing between table cells.
+ * 2. Block element behavior
+ * 3. Style
+ */
+.fp-table {
+    /* 1 */
+    border-collapse: collapse;
+    border-spacing: 0;
+    /* 2 */
+    width: 100%;
+    /* 3 */
+    margin-bottom: 15px;
+}
+/*
+ * Add margin if adjacent element
+ */
+* + .fp-table {
+    margin-top: 15px;
+}
+.fp-table th,
+.fp-table td {
+    padding: 8px 8px;
+}
+/*
+ * Set alignment
+ */
+.fp-table th {
+    text-align: left;
+}
+.fp-table td {
+    vertical-align: top;
+}
+.fp-table thead th {
+    vertical-align: bottom;
+}
+.fp-table td {
+    border-bottom: 1px solid #e5e5e5;
+}
+/*
+ * Caption and footer
+ */
+.fp-table caption,
+.fp-table tfoot {
+    font-size: 12px;
+    font-style: italic;
+}
+.fp-table caption {
+    text-align: left;
+    color: #999999;
+}

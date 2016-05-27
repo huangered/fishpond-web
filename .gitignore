@@ -6,3 +6,4 @@ Homestead.json
 .idea
 public/*/*.jpg
 public/*/*.png
+resources/assets/less/core/*.css

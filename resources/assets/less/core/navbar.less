@@ -1,0 +1,111 @@
+// refer to uikit navbar less;
+// https://github.com/uikit/uikit/blob/develop/src/less/core/navbar.less
+@navbar-background:                             #fff;
+@navbar-color:                                  #444;
+@navbar-link-color:                             #07D;
+@navbar-link-hover-color:                       #059;
+
+@navbar-nav-height:                             40px;
+@navbar-nav-line-height:                        @navbar-nav-height;
+@navbar-nav-padding-horizontal:                 15px;
+@navbar-nav-color:                              #444;
+@navbar-nav-font-size:                          14px;
+@navbar-nav-font-weight:                        normal;
+@navbar-nav-font-family:                        "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@navbar-nav-bottom-line:                        1px solid #e4e7ef;
+
+@navbar-nav-hover-background:                   #f5f5f5;
+@navbar-nav-hover-color:                        #444;
+@navbar-nav-onclick-background:                 #ddd;
+@navbar-nav-onclick-color:                      #444;
+@navbar-nav-active-background:                  #f5f5f5;
+@navbar-nav-active-color:                       #444;
+@navbar-nav-subtitle-font-size:                 10px;
+@navbar-nav-subtitle-offset:                    2px;
+
+@navbar-brand-font-size:                        18px;
+@navbar-brand-color:                            #444;
+@navbar-brand-hover-color:                      #444;
+
+@navbar-toggle-font-size:                       18px;
+@navbar-toggle-color:                           #444;
+@navbar-toggle-hover-color:                     #444;
+@navbar-toggle-icon:                            "\f0c9";
+@navbar-toggle-icon-alt:                        "\f002";
+
+// component: navbar
+.fp-navbar {
+    background: @navbar-background;
+    color: @navbar-color;
+}
+.fp-navbar.fp-bottom {
+    border-bottom: @navbar-nav-bottom-line;
+}
+.fp-navbar:before,
+.fp-navbar:after {
+    content: "";
+    display: table;
+}
+.fp-navbar:after {
+    clear:both
+}
+.fp-navbar-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: left;
+
+}
+
+.fp-navbar-nav.fp-center {
+    float: none;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;    
+}
+.fp-navbar-nav li {
+    float: left;
+    position: relative;
+}
+
+.fp-navbar-nav > li > a {
+    display: block;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+    height: @navbar-nav-height;
+    padding: 0 @navbar-nav-padding-horizontal;
+    line-height: @navbar-nav-line-height;
+    
+    color: @navbar-nav-color;
+    font-size: @navbar-nav-font-size;
+    font-family: @navbar-nav-font-family;
+    font-weight: @navbar-nav-font-weight;
+}
+
+/* Appear not as link */
+.fp-navbar-nav > li > a[href='#'] { cursor: text; }
+
+.fp-navbar-nav > li:hover > a,
+.fp-navbar-nav > li > a:focus, // 1
+.fp-navbar-nav > li.fp-open > a { // 2
+    background-color: @navbar-nav-hover-background;
+    color: @navbar-nav-hover-color;
+    /* 3 */
+    outline: none;
+}
+
+/* OnClick */
+.fp-navbar-nav > li > a:active {
+    background-color: @navbar-nav-onclick-background;
+    color: @navbar-nav-onclick-color;
+}
+
+/* Active */
+.fp-navbar-nav > li.fp-active > a {
+    background-color: @navbar-nav-active-background;
+    color: @navbar-nav-active-color;
+}

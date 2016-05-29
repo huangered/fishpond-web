@@ -51,7 +51,7 @@
        <div>
            <span><a href="#">Mobile app</a></span>
            <span><a href="#">Owner</a></span>
-           <span><a href="#">Suggestion</a></span>
+           <span><a href="{{ url('/suggest') }}">Suggestion</a></span>
        </div>
        <div>
            <span><a href="#">Join us</a></span>

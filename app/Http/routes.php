@@ -27,6 +27,10 @@ Route::get('/help', 'HelpController@index');
 Route::get('admin', 'AdminController@index');
 Route::post('admin', 'AdminController@update');
 
+// suggest api route
+Route::get('/suggest', 'SuggestController@index');
+Route::post('/suggest', 'SuggestController@store');
+
 // rest api route
 Route::group(['prefix' => 'api/v1'], function () {
     Route::get('photo/{photo}/comment', 'ImageController@comments');

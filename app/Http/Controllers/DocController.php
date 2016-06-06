@@ -19,7 +19,7 @@ class DocController extends Controller
 		if ($request->label!=null) {
 			$docs = Label::find($request->label)->documents()->get();
 		}else {
-			$docs = Document::all();
+			$docs = Document::orderBy('created_at', 'DESC')->get();
 		}
 		$message = new Message;
 

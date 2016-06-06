@@ -12,7 +12,7 @@ use fishpond\Label;
 class ImageController extends Controller
 {
 	public function index() {
-		$imgs = Image::all();
+		$imgs = Image::orderBy('created_at', 'DESC')->get();
 		$labels = Label::all();
 		return view('photos.index')->with('photos', $imgs)->with('labels', $labels);
 	}

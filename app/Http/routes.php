@@ -19,6 +19,8 @@ Route::resource('people.roles', 'RoleController');
 Route::resource('people.roles.perms', 'PermController');
 Route::resource('photo', 'ImageController');
 Route::resource('label', 'LabelController');
+Route::resource('video', 'VideoController');
+
 
 Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index');

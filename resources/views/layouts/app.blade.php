@@ -13,6 +13,7 @@
     <script src="{{ url('/semantic/semantic.js') }}"></script>
     <script src="{{ url('/js/vue.min.js') }}"></script>
     @yield('js')
+    @yield('css')
 </head>
 <body >
     <div class="ui fixed borderless menu">

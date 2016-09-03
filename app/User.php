@@ -37,6 +37,10 @@ class User extends Authenticatable
 	    return $this->hasOne('fishpond\Profile');
     }
 
+    public function body(){
+        return $this->hasOne('fishpond\Body');
+    }
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
